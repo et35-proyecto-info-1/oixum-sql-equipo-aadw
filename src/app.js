@@ -20,8 +20,8 @@ app.post('/', function(req, res) {
   const query = req.body.query;
   connection.query(query, function (error, results, fields) {
     res.render('home', {
-      resultados: JSON.stringify(results[,(\n)]),
-      columnas: JSON.stringify(fields),
+      resultados: results,
+      columnas:fields,
       error: error
     });
   });

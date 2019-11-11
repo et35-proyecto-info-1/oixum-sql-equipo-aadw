@@ -1,15 +1,42 @@
 
-<img src="" alt="">
-<form method="post" action="/" class="tabla">
+<img src="foto.png" align="right">
+<form method="post" action="/" class="tabla" align="center">
   <textarea name="query" rows="10" cols="60"></textarea><br />
-  <input type="submit" />
+  <input type="submit" class="boton">
 </form>
 
+
+
+
+
 <h3>Resultados</h3>
-<code>{{ resultados }}</code>
+
+{{#each resultados}}
+  {{this.name}}
+{{/each }}
+
+
 
 <h3>Columnas</h3>
-<code>{{ columnas }}</code>
+
+  <table border="black" class="tabla" align="center">
+<thead>
+{{#each columnas}}
+<td>{{this.name}}</td>
+{{/each }}
+</thead>
+<tbody>
+{{#each resultados}}
+  <tr>
+    <td>{{this.id}}</td>
+    <td>{{this.nombre}}</td>
+    <td>{{this.comidaPreferida}}</td>
+    <td>{{this.fechaNacimiento}}</td>
+    {{/each }}
+</tbody>
+
+</table>
+
 
 <h3>Error</h3>
 <code>{{ error }}</code>

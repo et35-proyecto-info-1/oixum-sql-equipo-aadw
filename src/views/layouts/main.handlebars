@@ -3,6 +3,68 @@
 <head>
   <meta charset="utf-8">
   <title>Oixum SQL</title>
+
+<style >
+body {
+ -moz-animation-duration: 5s;
+  -moz-animation-name: bkchange;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+   -webkit-animation-duration: 5s;
+  -webkit-animation-name: bkchange;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+@-moz-keyframes bkchange {
+  from {
+    background: lightblue;
+  }
+  to {
+    background:red;
+  }
+}
+@-webkit-keyframes bkchange {
+  from {
+    background:rgba(255, 0, 0, 0.9););
+  }
+
+  to {
+    background:lightblue;
+  }
+}
+
+.boton{  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding:15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ align-items: center;
+
+  cursor: pointer;
+  width: 30%;
+}
+
+textarea {
+  width: 30%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+
+}
+
+.tabla
+{
+  font-size:1.8vw;
+
+}
+</style>
+
 </head>
 <body>
   {{{ body }}}
