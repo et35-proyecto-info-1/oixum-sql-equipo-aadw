@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    style
+      include style.css
+    body
+      h1(align="center") Consulta
+
+      img.Foto(src='https://github.com/Alanbestia/Foto/blob/master/foto.png?raw=true' alt='' align='right' height='250' width='250')
+
+      form.tabla(method='post' action='/' align='center')
+        textarea(name='query' rows='10' cols='60')
+        br
+        input.boton(type='submit')
+
+
+      if (results)
+        br
+        table( border="black" class="tabla" align="center" )
+          thead
+            each col in fields
+              th=col.name
+          tbody
+            each row in results
+              tr
+                each col in fields
+                  td=row[col.name]
+if(error)
+  each col in error
+    h3=col.error
