@@ -1,5 +1,5 @@
 
-<img src="foto.png" align="right">
+<img src="https://github.com/Alanbestia/Foto/blob/master/foto.png?raw=true" alt="" align="right" height="250" width="250" class="Foto">
 <form method="post" action="/" class="tabla" align="center">
   <textarea name="query" rows="10" cols="60"></textarea><br />
   <input type="submit" class="boton">
@@ -9,32 +9,38 @@
 
 
 
-<h3>Resultados</h3>
 
-{{#each resultados}}
-  {{this.name}}
-{{/each }}
 
 
 
 <h3>Columnas</h3>
 
   <table border="black" class="tabla" align="center">
-<thead>
-{{#each columnas}}
-<td>{{this.name}}</td>
-{{/each }}
-</thead>
+    <thead>
+      {{#each columnas}}
+      <th>{{this.name}}</th>
+      {{/each }}
+
+    </thead>
 <tbody>
+
+
 {{#each resultados}}
   <tr>
-    <td>{{this.id}}</td>
+{{#if this.id}}
+<td>{{this.id}}</td>
+{{/ if }}
+{{#if this.nombre}}
     <td>{{this.nombre}}</td>
+    {{/ if }}
+    {{#if this.comidaPreferida}}
     <td>{{this.comidaPreferida}}</td>
+    {{/ if }}
+    {{#if this.fechaNacimiento}}
     <td>{{this.fechaNacimiento}}</td>
+    {{/ if }}
     {{/each }}
 </tbody>
-
 </table>
 
 
